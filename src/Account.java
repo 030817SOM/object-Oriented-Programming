@@ -3,9 +3,9 @@ public class Account {
     private static int nextAccountNumber = 18349045;
 
 
-    private String name;
-    private String surname;
-    private String AccountNumber;
+    private final String name;
+    private final String surname;
+    private final String AccountNumber;
     private double Balance;
 
 
