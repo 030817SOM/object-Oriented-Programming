@@ -13,7 +13,7 @@ public class Account {
     public Account(String name, String Surname, double Balance){
         this.name = name;
         this.surname = Surname;
-        this.AccountNumber = "ACC NO: " + " " + nextAccountNumber++;
+        this.AccountNumber = "ACC" + " " + nextAccountNumber++;
         this.Balance = Balance;
 
     }
@@ -35,6 +35,7 @@ public class Account {
     public void withdraw(double amount){
         if(amount > 0 && amount<= Balance){
             Balance -= amount;
+            System.out.println("-R" + amount + "into your savings account");
         } else if (amount > Balance) {
             System.out.println("you have insufficient balance");
         }else {
