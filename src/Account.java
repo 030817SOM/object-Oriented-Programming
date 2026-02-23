@@ -1,26 +1,28 @@
 public class Account {
+
+    private static int nextAccountNumber = 18349045;
+
+
     private String name;
     private String surname;
+    private String AccountNumber;
     private double Balance;
+
 
 
     public Account(String name, String Surname, double Balance){
         this.name = name;
         this.surname = Surname;
+        this.AccountNumber = "ACC NO: " + " " + nextAccountNumber++;
         this.Balance = Balance;
 
     }
-    public void setName(String name){
-        this.name = name;
+
+    public String getAccountNumber() {
+        return AccountNumber;
     }
-    public String getName(){
-        return name;
-    }
-    public void setSurname(String surname){
-        this.surname = surname;
-    }
-    public String getSurname(){
-        return surname;
+    public String getFullName(){
+        return name + " " + surname;
     }
     public void deposit(double amount){
         if(amount > 0 ){
