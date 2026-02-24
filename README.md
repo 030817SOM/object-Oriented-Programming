@@ -3,10 +3,11 @@
 
 ##  Project Description
 This is a console-based banking system developed in Java using Object-Oriented Programming (OOP) principles.  
-The system allows users to create accounts, deposit money, withdraw money, and view account balances.
+The system allows users to create accounts, deposit money, withdraw money, view account balances, and view transaction history.
 The application demonstrates clean OOP architecture with separation of concerns between:
 - Account (Model)
 - Bank (Service/Manager)
+- Transaction (model)
 - AccountTest (User Interface)
   
 
@@ -14,7 +15,8 @@ The application demonstrates clean OOP architecture with separation of concerns 
 ✔ Create new bank account  
 ✔ Automatically generate account numbers  
 ✔ Deposit money  
-✔ Withdraw money  
+✔ Withdraw money 
+✔ Transaction history 
 ✔ View account balance  
 ✔ Multiple accounts supported  
 ✔ Input validation  
@@ -26,7 +28,7 @@ The application demonstrates clean OOP architecture with separation of concerns 
 Bank System
 ├── Account.java
 ├── Bank.java
-└── BankApp.java
+└── AccountTest.java
 
 
 ### Account.java
@@ -47,6 +49,12 @@ Main application class.
 - Displays menu
 - Handles user input
 - Interacts with Bank and Account classes
+
+### Transaction.java
+
+-Stores transactions type (deposit/withdrawal)
+-stores transaction amount
+-stores updated balance after transaction 
   
 
 ##OOP Concepts Used
@@ -56,6 +64,7 @@ Main application class.
 - Immutability (`final` fields)
 - Static variables (automatic account number generation)
 - Separation of Concerns
+- basic data structures
   
 
 ## How to Run the Program
@@ -71,7 +80,8 @@ Main application class.
 2.	Deposit
 3.	Withdraw
 4.	View Balance
-5.	Exit
+5.	Transaction History
+6.	Exit
 
 
 ##Notes
@@ -81,7 +91,6 @@ Main application class.
 
   
 ## Future Improvements
-- Add transaction history
 - Add PIN authentication
 - Connect to database (MySQL)
 - Convert to Spring Boot REST API
