@@ -17,7 +17,8 @@ public class AccountTest {
             System.out.println("2.  Deposit");
             System.out.println("3.  withdraw");
             System.out.println("4.  view your Balance");
-            System.out.println("5.  Exit");
+            System.out.println("5.  Transaction History");
+            System.out.println("6.  Exit");
             System.out.println("Choose option: ");
 
             choice = input.nextInt();
@@ -78,15 +79,27 @@ public class AccountTest {
                     }
                     break;
                 case 5:
+                    System.out.println("Enter your Account Number: ");
+                    String TransAcc = input.nextLine();
+
+                    Account transAccount = bank.findAccount(TransAcc);
+
+                    if(transAccount != null){
+                        transAccount.printTransactionHistory();
+                    } else {
+                      System.out.println("Account not found!");
+                    }
+                    break;
+                case 6:
                     System.out.println("Thank you for banking with us!");
                     break;
                 default:
                     System.out.println("Invalid option.");
-
+                    System.out.println(" ");
 
             }
 
-        }while(choice != 5);
+        }while(choice != 6);
 
         input.close();
     }
